@@ -90,7 +90,7 @@ func (f *federation) InjectSourceEarly() *ast.Source {
 	scalar _Any
 	scalar _FieldSet
 
-	directive @external on FIELD_DEFINITION
+	directive @external on FIELD_DEFINITION | OBJECT
 	directive @requires(fields: _FieldSet!) on FIELD_DEFINITION
 	directive @provides(fields: _FieldSet!) on FIELD_DEFINITION
 	directive @extends on OBJECT | INTERFACE
